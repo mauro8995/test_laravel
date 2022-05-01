@@ -10,6 +10,11 @@
                     </div>
                 @enderror
 
+                @error('email')
+                    <div class="alert alert-danger">
+                        <span class="error">{{ $message }}</span>
+                    </div>
+                @enderror
 
         </div>
         <div class="row">

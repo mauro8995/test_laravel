@@ -21,9 +21,7 @@ class Users extends Component
     protected $rules = [
         'name' => 'required|min:6',
         'email' => 'required|email',
-        'password' =>'required|min:6|
-        regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\x])(?=.*[!$#%]).*$/|
-        confirmed'
+        'password' =>'required|min:6'
     ];
 
     //pagina de inicio usuario
@@ -36,7 +34,7 @@ class Users extends Component
 
     //eliminar usuario
     public function eliminar($id){
-        User::find($id)->delete();
+    User::find($id)->delete();
     }
 
     //limpar datos
@@ -75,7 +73,6 @@ class Users extends Component
         $u->email = $this->email;
         $u->password= bcrypt($this->password);
         $u->save();
-
         return redirect('/usuarios');
     }
 
