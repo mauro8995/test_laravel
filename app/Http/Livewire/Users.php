@@ -21,7 +21,7 @@ class Users extends Component
     protected $rules = [
         'name' => 'required|min:6',
         'email' => 'required|email',
-        'password' =>'required|min:6'
+        'password' =>'required|min:8'
     ];
 
     //pagina de inicio usuario
